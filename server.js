@@ -15,7 +15,7 @@ client.connect();
 // App & Database
 const dbName = process.env.DB_NAME 
 const app = express()
-const port = 3000 
+const port = process.env.PORT || 3000;
 
 // Middleware
 app.use(bodyparser.json())
@@ -50,5 +50,5 @@ app.delete('/', async (req, res) => {
 
 
 app.listen(port, () => {
-    console.log(`Example app listening on  http://localhost:${port}`)
+    console.log(`Example app listening on ${port}`)
 })
