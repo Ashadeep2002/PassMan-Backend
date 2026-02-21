@@ -49,6 +49,6 @@ app.delete('/', async (req, res) => {
 })
 
 
-app.listen(port, () => {
-    console.log(`Example app listening on ${port}`)
-})
+app.listen(process.env.PORT || 3000, () => {
+  console.log("Server running");
+});
